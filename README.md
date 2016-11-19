@@ -4,11 +4,11 @@ This is a storage that uses observer design pattern to call every listener after
 Simple example. Using with React JS
 
 ```
-npm install real-life --save
+npm install real-time --save
 ```
 
 ```javascript
-import RStorage from "real-life";
+import RStorage from "real-time";
 
 class Demo extends React.Component {
 	constructor(props){
