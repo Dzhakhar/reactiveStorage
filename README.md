@@ -2,8 +2,13 @@
 This is a storage that uses observer design pattern to call every listener after updating the storage.
 
 Simple example. Using with React JS
+
+```
+npm install real-life --save
+```
+
 ```javascript
-import RStorage from "reactive-storage";
+import RStorage from "real-life";
 
 class Demo extends React.Component {
 	constructor(props){
