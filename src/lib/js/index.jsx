@@ -96,7 +96,6 @@ class Demo extends React.Component {
 
 	componentWillMount(){
 		RStorage.clean();
-		console.log(RStorage.clean);
 		RStorage.subscribe("username", this.increment);
 	}
 
