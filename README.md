@@ -32,7 +32,6 @@ class Demo extends React.Component {
 
 	componentWillMount(){
 		RStorage.clean(); // if you want to clean localStorage after reloading
-		console.log(RStorage.clean);
 		RStorage.subscribe("username", this.increment);
 	}
 
