@@ -1,6 +1,9 @@
-# react-storage
+# reactive-storage
+This is a storage that uses observer design pattern to call every listener after updating the storage.
+
+Simple example. Using with React JS
 ```javascript
-import ReactStorage from "reactive-storage";
+import RStorage from "reactive-storage";
 
 class Demo extends React.Component {
 	constructor(props){
