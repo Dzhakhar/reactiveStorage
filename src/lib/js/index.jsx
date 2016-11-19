@@ -143,9 +143,11 @@ class Demo2 extends React.Component {
 	}
 }
 
-ReactDOM.render(
-	<div><Demo/><Demo2/></div>,
-	document.getElementById("demo")
-)
+if(window.reactStorageShowDemo && document.getElementById("react-storage-demo")){
+	ReactDOM.render(
+		<div><Demo/><Demo2/></div>,
+		document.getElementById("react-storage-demo")
+	)
+}
 
 export default RStorage;

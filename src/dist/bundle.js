@@ -262,12 +262,14 @@
 		return Demo2;
 	}(_react2.default.Component);
 
-	_reactDom2.default.render(_react2.default.createElement(
-		"div",
-		null,
-		_react2.default.createElement(Demo, null),
-		_react2.default.createElement(Demo2, null)
-	), document.getElementById("demo"));
+	if (window.reactStorageShowDemo && document.getElementById("react-storage-demo")) {
+		_reactDom2.default.render(_react2.default.createElement(
+			"div",
+			null,
+			_react2.default.createElement(Demo, null),
+			_react2.default.createElement(Demo2, null)
+		), document.getElementById("react-storage-demo"));
+	}
 
 	exports.default = RStorage;
 
