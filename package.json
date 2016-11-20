@@ -5,7 +5,6 @@
   "main": "webpack.config.js",
   "dependencies": {
     "react": "^15.3.2",
-    "react-addons-css-transition-group": "^15.3.2",
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
@@ -18,11 +17,6 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-runtime": "^6.18.0",
-    "css-loader": "^0.25.0",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "style-loader": "^0.13.1",
     "webpack": "^1.13.3"
   },
   "scripts": {
@@ -31,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dzhakhar/react-npm-module-boilerplate.git"
+    "url": "git+https://github.com/Dzhakhar/reactiveStorage.git"
   },
-  "author": "",
+  "author": "Dzhakhar Ukhaev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dzhakhar/react-npm-module-boilerplate/issues"
+    "url": "https://github.com/Dzhakhar/reactiveStorage/issues"
   },
-  "homepage": "https://github.com/Dzhakhar/react-npm-module-boilerplate#readme"
+  "homepage": "https://github.com/Dzhakhar/reactiveStorage"
 }

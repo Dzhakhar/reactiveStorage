@@ -126,7 +126,6 @@ var Demo = function (_React$Component) {
 		key: "componentWillMount",
 		value: function componentWillMount() {
 			RStorage.clean();
-			console.log(RStorage.clean);
 			RStorage.subscribe("username", this.increment);
 		}
 	}, {
