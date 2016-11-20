@@ -1,6 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
 var ReactStorage = (function(){
 	var instance;
 
@@ -72,85 +69,5 @@ var ReactStorage = (function(){
 })();
 
 var RStorage = ReactStorage.init();
-
-class Demo extends React.Component {
-	constructor(props){
-		super(props);
-
-		this.state = {
-			updateCounter: 0
-		}
-
-		this.increment = this.increment.bind(this);
-		this.setUsername = this.setUsername.bind(this);
-		this.componentWillMount = this.componentWillMount.bind(this);
-	}
-
-	increment(){
-		this.setState({
-			updateCounter: this.state.updateCounter + 1
-		})
-	}
-
-	setUsername(event){
-		event.preventDefault();
-		let value = this.refs.inp.value;
-		RStorage.update("username", value);
-	}
-
-	componentWillMount(){
-		RStorage.clean();
-		RStorage.subscribe("username", this.increment);
-	}
-
-	render(){
-		let username = RStorage.getItem("username");
-
-		return <div>
-			<h1>{(username) ? username : "empty value"}</h1>
-			<h4>{this.state.updateCounter}</h4>
-			<input type="text" onChange={this.setUsername} ref="inp"></input>
-			<button onClick={this.setUsername}>Set username</button>
-		</div>
-	}
-}
-
-class Demo2 extends React.Component {
-	constructor(props){
-		super(props);
-
-		this.state = {
-			updateCounter: 0
-		}
-
-		this.increment = this.increment.bind(this);
-		this.componentWillMount = this.componentWillMount.bind(this);
-	}
-
-	increment(){
-		this.setState({
-			updateCounter: this.state.updateCounter + 1
-		})
-	}
-
-	componentWillMount(){
-		RStorage.subscribe("username", this.increment);
-	}
-
-	render(){
-		let username = RStorage.getItem("username");
-
-		return <div>
-			<h1>{(username) ? username : "empty value"}</h1>
-		</div>
-	}
-}
-
-if(window.reactStorageShowDemo && document.getElementById("react-storage-demo")){
-	ReactDOM.render(
-		<div><Demo/><Demo2/></div>,
-		document.getElementById("react-storage-demo")
-	)
-}
 
 export default RStorage;
