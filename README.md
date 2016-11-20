@@ -8,6 +8,8 @@ npm install real-time --save
 ```
 
 ```javascript
+import React from "react";
+import ReactDOM from "react-dom";
 import RStorage from "real-time";
 
 class Demo extends React.Component {
