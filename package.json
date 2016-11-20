@@ -3,11 +3,10 @@
   "version": "1.0.6",
   "description": "Save data, subscribe on it's updating and then update it.",
   "main": "webpack.config.js",
-  "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
