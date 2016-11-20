@@ -34,7 +34,7 @@ class Demo extends React.Component {
 	setUsername(event){
 		event.preventDefault();
 		let value = this.refs.inp.value;
-		RStorage.update("username", value);
+		RStorage.setItem("username", value);
 	}
 
 	componentWillMount(){
