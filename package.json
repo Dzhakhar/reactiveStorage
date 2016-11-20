@@ -1,6 +1,6 @@
 {
   "name": "real-time",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Save data, subscribe on it's updating and then update it.",
   "keywords": [
     "reactive programming",
