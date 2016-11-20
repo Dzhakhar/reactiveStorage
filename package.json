@@ -1,8 +1,17 @@
 {
   "name": "real-time",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Save data, subscribe on it's updating and then update it.",
-  "keywords":["reactive programming", "real time", "realtime", "real-time", "redux", "data binding", "react storage", "reactive storage"],
+  "keywords": [
+    "reactive programming",
+    "real time",
+    "realtime",
+    "real-time",
+    "redux",
+    "data binding",
+    "react storage",
+    "reactive storage"
+  ],
   "main": "webpack.config.js",
   "dependencies": {},
   "devDependencies": {
