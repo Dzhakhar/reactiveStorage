@@ -11,7 +11,11 @@ var ReactStorage = (function(){
 		scope.listeners = {};
 		scope.prefix = "_rstorage_";
 
-		scope.clean = function(){
+		scope.clean = function(name){
+			if(name){
+				localStorage.removeItem(name);
+				return true;
+			}
 			for(var name in localStorage){
 				if(name.indexOf(scope.prefix) > -1){
 					localStorage.removeItem(name);
