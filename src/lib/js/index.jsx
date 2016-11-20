@@ -35,23 +35,35 @@ var ReactStorage = (function(){
 		}
 
 		scope.setItem = function(name, value){
-			value = value;
-			localStorage.setItem(scope.prefix + name, value);
 			scope.storage[scope.prefix + name] = value;
+			if(value === undefined){
+				value = "{{#type undefined#}}";
+			}
+			localStorage.setItem(scope.prefix + name, JSON.stringify(value));
+
+			if(scope.listeners[name]){
+				for(let i = 0; i < scope.listeners[name].length; i++){
+					if(typeof(scope.listeners[name][i]) === "function"){
+						scope.listeners[name][i](value);
+					}
+				}
+			}
 		}
 
 		scope.getItem = function(name){
-			return localStorage.getItem(scope.prefix + name);
-		}
+			let value = JSON.parse(localStorage.getItem(scope.prefix + name));
 
-		scope.update = function(name, newValue){
-			scope.storage[scope.prefix + name] = newValue;
-			localStorage.setItem(scope.prefix + name, newValue);
-			for(let i = 0; i < scope.listeners[name].length; i++){
-				if(typeof(scope.listeners[name][i]) === "function"){
-					scope.listeners[name][i](newValue);
-				}
+			if(value === "{{#type undefined#}}"){
+				return undefined;
 			}
+
+			return value;
+
+			if(typeof(JSON.parse(value)) === "boolean"){
+				return JSON.parse(value);
+			}
+
+			return value;
 		}
 
 		return scope;
