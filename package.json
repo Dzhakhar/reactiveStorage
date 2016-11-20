@@ -17,7 +17,10 @@
     "reactive storage"
   ],
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
   "devDependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
