@@ -1,7 +1,7 @@
 {
   "name": "real-time",
   "version": "1.0.5",
-  "description": "",
+  "description": "Save data, subscribe on it's updating and then update it.",
   "main": "webpack.config.js",
   "dependencies": {
     "react": "^15.3.2",
