@@ -50,20 +50,30 @@ var ReactStorage = (function(){
 			}
 		}
 
-		scope.getItem = function(name){
+		scope.getItem = function(name, defaultValue=undefined){
 			let value = JSON.parse(localStorage.getItem(scope.prefix + name));
 
 			if(value === "{{#type undefined#}}"){
+				if(defaultValue){
+					return defaultValue;
+				}
+				
 				return undefined;
 			}
-
-			return value;
 
 			if(typeof(JSON.parse(value)) === "boolean"){
 				return JSON.parse(value);
 			}
 
 			return value;
+		}
+		
+		scope.isExists = function(key){
+			return scope.storage.hasOwnProperty(key);
+		}
+		
+		scope.getStorage = function(){
+			return scope.storage;
 		}
 
 		return scope;
